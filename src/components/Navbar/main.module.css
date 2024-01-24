@@ -1,0 +1,210 @@
+.container_nav {
+  width: 100%;
+  opacity: 1;
+  display: flex;
+  padding: 0 20px;
+  position: fixed;
+  transition: all 0.2s ease;
+  align-items: center;
+  justify-content: space-between;
+  animation-name: containerNav;
+  animation-fill-mode: forwards;
+  animation-duration: 1.5s;
+  z-index: 100;
+}
+
+.container_nav:hover {
+  opacity: 1 !important;
+}
+
+@keyframes containerNav {
+  to {
+    height: 80px;
+  }
+  from {
+    height: 0px;
+  }
+}
+
+.container_logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.logo {
+  width: 70px;
+  padding: 0 7px;
+  animation-name: logo;
+  animation-duration: 2s;
+}
+
+@keyframes logo {
+  to {
+    transform: translateY(0px);
+  }
+  from {
+    transform: translateY(-2000px);
+  }
+}
+
+.nav_lists {
+  padding: 2px;
+  display: flex;
+  opacity: 0;
+  overflow: hidden !important;
+  align-items: center;
+  animation-name: nav_lists;
+  justify-content: flex-end;
+  animation-delay: 2s;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  column-gap: 20px;
+}
+
+@keyframes nav_lists {
+  to {
+    opacity: 1;
+    overflow: auto;
+  }
+  from {
+    opacity: 0;
+    overflow: auto;
+  }
+}
+
+.nav_list {
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid transparent;
+  font-weight: 400;
+  z-index: 100;
+}
+
+.nav_list:hover {
+  color: #fff;
+}
+
+.nav_option {
+  cursor: pointer;
+  display: none;
+  z-index: 100;
+  color: #fff;
+}
+
+.container_submenu {
+  top: 50px;
+  width: 100px;
+  height: 80px;
+  display: flex;
+  padding: 10px;
+  position: fixed;
+  flex-direction: column;
+  transition: all 0.2s ease;
+  background-color: #fff;
+}
+
+.submenu {
+  color: #000;
+  padding: 5px 0;
+}
+
+.authentication {
+  padding: 10px 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  letter-spacing: 1px;
+  animation-name: contact;
+  background-color: #fff;
+  animation-duration: 3.5s;
+  transition: all 0.2s ease;
+}
+
+.authentication:hover {
+  background-color: #fff;
+}
+
+.options {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+  animation-name: contact;
+  position: relative;
+  animation-duration: 3.5s;
+  transition: all 0.2s ease;
+}
+
+.menu {
+  color: #fff;
+  cursor: pointer;
+  font-size: 2.3rem;
+}
+
+@keyframes contact {
+  to {
+    transform: translateY(0px);
+  }
+  from {
+    transform: translateY(-2000px);
+  }
+}
+
+@media (max-width: 1000px) {
+  .options {
+    display: flex;
+    flex-direction: column;
+    animation: none !important;
+  }
+  .authentication {
+    color: #fff;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    background-color: #000;
+    animation: none !important;
+  }
+  .authentication:hover {
+    background-color: #000;
+  }
+  .nav_option {
+    z-index: 100;
+    display: block;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+  }
+  .nav_list {
+    color: #000;
+    font-size: 1.4rem;
+  }
+  .nav_list:hover {
+    color: #000;
+  }
+  .nav_lists {
+    top: -200%;
+    left: 0;
+    right: 0;
+    position: fixed;
+    transition: all 0.5s ease;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    z-index: 50;
+    height: 100vh;
+    width: 100% !important;
+    color: #000;
+    gap: 50px;
+  }
+  .menu {
+    color: #000;
+  }
+  .container_submenu {
+    display: none;
+  }
+}

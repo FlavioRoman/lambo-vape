@@ -1,0 +1,310 @@
+.container {
+  display: flex;
+  position: relative;
+  min-height: 100vh;
+  padding-top: 80px;
+  flex-direction: column;
+  border-bottom: 1px solid #ddd;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.subtitle {
+  padding: 0 2px;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 400;
+}
+
+.desc {
+  width: 100%;
+  color: #808080;
+  max-width: 800px;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  max-width: 500px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  gap: 20px;
+}
+
+.logo {
+  top: 10%;
+  left: 0;
+  right: 0;
+  position: absolute;
+  width: auto;
+  margin: auto;
+}
+
+.logo_title {
+  color: #fff;
+  font-size: 5rem;
+  text-align: center;
+  font-family: "LaMacchina";
+}
+
+.logo_subtitle {
+  color: #fff;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  text-align: center;
+  font-family: "BolsterRegular";
+}
+
+.vape01,
+.vape02,
+.vape03 {
+  top: 0;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  position: absolute;
+  max-width: 130px;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.vape01 {
+  left: 200px;
+}
+.vape02 {
+  right: 200px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 81px);
+}
+
+.item {
+  flex: 1;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: calc(100vh - 80px);
+}
+
+.item:first-child {
+  opacity: 0;
+  transform: translateX(-1000px);
+  animation-name: item01;
+  animation-delay: 2s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes item01 {
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  from {
+    transform: translateX(-1000px);
+  }
+}
+
+.item:last-child {
+  opacity: 0;
+  transform: translateX(1000px);
+  animation-name: item02;
+  animation-delay: 2s;
+  background-color: #000;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.ticketGif {
+  width: 100%;
+  height: 310px;
+  opacity: 0;
+  max-width: 570px;
+  margin-left: 20px;
+  animation-name: ticketGif;
+  animation-delay: 3s;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  position: absolute;
+  top: 0;
+  left: 150px;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+@keyframes ticketGif {
+  to {
+    opacity: 1;
+  }
+  from {
+    opacity: 0;
+  }
+}
+
+.ticketImg {
+  width: 100%;
+  height: 380px;
+  opacity: 0;
+  max-width: 570px;
+  animation-name: ticketImg;
+  animation-delay: 4s;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+@keyframes ticketImg {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes item02 {
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  from {
+    transform: translateX(1000px);
+  }
+}
+
+.vape01 {
+  opacity: 0;
+  animation-name: vape01;
+  animation-delay: 3s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes vape01 {
+  to {
+    opacity: 1;
+  }
+  from {
+    opacity: 0;
+  }
+}
+
+.vape02 {
+  opacity: 0;
+  animation-name: vape02;
+  animation-delay: 3.5s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes vape02 {
+  to {
+    opacity: 1;
+  }
+  from {
+    opacity: 0;
+  }
+}
+
+.vape03 {
+  opacity: 0;
+  animation-name: vape03;
+  animation-delay: 4s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.copy {
+  color: #fff;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.lists {
+  font-size: 0.7rem;
+}
+
+.lists > li {
+  color: #fff;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.footer > p {
+  font-size: 0.7rem;
+}
+
+.footer {
+  padding: 0 20px;
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  left: 0;
+}
+
+@keyframes vape03 {
+  to {
+    opacity: 1;
+  }
+  from {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 1080px) {
+  .item:last-child {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .form {
+    padding: 0 10px;
+  }
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 428px) {
+  .title {
+    font-size: 1.7rem;
+  }
+  .subtitle {
+    font-size: 1.2rem;
+  }
+  .desc {
+    font-size: 0.8rem;
+  }
+}
